@@ -19,8 +19,8 @@
     "nodemon": "^2.0.14"
   },
   "scripts": {
-    "start": "nodemon ./index.js",
-    "desarrollo": "node ./index.js"
+    "start": "node ./index.js",
+    "desarrollo": "nodemon ./index.js"
   },
   "author": "Luis Siguenza",
   "license": "ISC"
