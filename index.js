@@ -18,7 +18,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-const whitelist = [process.env.FRONTEND_URL,'https://elegant-villani-b5f35a.netlify.app'];
+const whitelist = ["process.env.FRONTEND_URL"];
 
 const corsOption = { 
     origin: ( origin, callback) => {
