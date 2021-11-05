@@ -20,6 +20,7 @@ exports.registrarUsuario = async (req, res) => {
 
 exports.autenticarUsuario = async (req, res, next) => {
     // buscar el usuario
+    try{
     const { email, password } = req.body;
     const usuario = await Usuarios.findOne({ email });
 
@@ -50,5 +51,9 @@ exports.autenticarUsuario = async (req, res, next) => {
         }
 
 
+    }}
+    catch{
+        console.log(error);
+        res.json({mensaje : 'Hubo un error'});
     }
 }
