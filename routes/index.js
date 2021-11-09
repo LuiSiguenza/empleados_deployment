@@ -4,6 +4,7 @@ const router = express.Router();
 
 const empleadosController = require('../controllers/empleadosController');
 const usuariosController = require('../controllers/usuariosController');
+const areasController = require('../controllers/areasController');
 
 // middle para proteger las rutas
 const auth = require('../middleware/auth');
@@ -11,6 +12,22 @@ const auth = require('../middleware/auth');
 module.exports = function() {
     
    
+        // Obtener todas las areas
+    router.get('/areas', 
+        auth,
+        areasController.mostrarAreas 
+    );
+
+    // Obtener todas las subareas
+    router.get('/areas/:area', 
+        auth,
+        areasController.mostrarSubarea );
+
+    router.post('/areas',
+     auth,
+     areasController.nuevaArea 
+    );
+
     //Empleados
 
      // Agrega nuevos empleados via POST

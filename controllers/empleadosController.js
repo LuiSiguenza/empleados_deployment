@@ -16,6 +16,7 @@ exports.nuevoEmpleado = async (req, res, next) => {
 exports.mostrarEmpleados = async (req, res, next) => {
     try {
         const empleados = await Empleados.find({});
+        
         res.json(empleados);
     } catch (error) {
         console.log(error);
