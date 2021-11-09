@@ -28,7 +28,7 @@ const corsOption = {
         if(existe){
             callback(null, true);
         }else {
-            callback(new Error('No permitido por CORS',whitelist));
+            callback(new Error('No permitido por CORS---',whitelist));
         }
     }
 }
