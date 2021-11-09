@@ -11,7 +11,7 @@ exports.mostrarAreas = async (req, res, next) => {
 }
 
 exports.mostrarSubarea = async (req, res, next) => {
-    const area = await Areas.find({"_id" : req.params.area},{"subarea":1});
+    const area = await Areas.find({"area" : req.params.area},{"subarea":1});
 
     if(!area) {
         res.json({mensaje : 'Esa area no existe'});

@@ -54,7 +54,7 @@ module.exports = function() {
 
  // Eliminar Empleado
  router.delete('/empleados/:idEmpleado',
-    auth, 
+    //auth, 
      empleadosController.eliminarEmpleado);
 
 
