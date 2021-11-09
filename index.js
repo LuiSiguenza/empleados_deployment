@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 const whitelist = [process.env.FRONTEND_URL];
-
+console.log(whitelist)
 const corsOption = { 
 
     origin: ( origin, callback) => {
