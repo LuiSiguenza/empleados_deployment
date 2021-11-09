@@ -18,7 +18,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-const whitelist = [process.env.FRONTEND_URL];
+const whitelist = ["https://vigilant-wozniak-72aef5.netlify.app/"];
 console.log(whitelist)
 const corsOption = { 
 
