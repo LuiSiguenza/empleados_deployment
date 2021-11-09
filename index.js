@@ -19,16 +19,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 const whitelist = [process.env.FRONTEND_URL];
-console.log(whitelist)
+
 const corsOption = { 
 
     origin: ( origin, callback) => {
-        console.log('inicio origin',origin)
+        console.log('inicio origin',origin,whitelist)
         const existe = whitelist.some( dominio => dominio === origin);
         if(existe){
             callback(null, true);
         }else {
-            console.log('else',origin)
+            console.log('else',origin,whitelist)
             callback(new Error(whitelist));
         }
     }
