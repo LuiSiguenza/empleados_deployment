@@ -16,7 +16,6 @@ exports.nuevoEmpleado = async (req, res, next) => {
 exports.mostrarEmpleados = async (req, res, next) => {
     try {
         const empleados = await Empleados.find({});
-        
         res.json(empleados);
     } catch (error) {
         console.log(error);
@@ -38,9 +37,10 @@ exports.mostrarEmpleado = async (req, res, next) => {
 
 exports.actualizarEmpleado = async (req, res, next) => {
     try {
-        const empleado = await Empleados.findOneAndUpdate({ _id : req.params.idEmpleado }, req.body, {
-            new : true
-        });
+        const empleado = await Empleados.findOneAndUpdate({ _id : req.params.idEmpleado }, 
+            req.body, {
+                new : true
+            });
         res.json(empleado);
     } catch (error) {
         res.send(error);

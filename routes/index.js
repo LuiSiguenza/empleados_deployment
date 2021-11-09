@@ -21,41 +21,44 @@ module.exports = function() {
     // Obtener todas las subareas
     router.get('/areas/:area', 
         auth,
-        areasController.mostrarSubarea );
+        areasController.mostrarSubarea 
+    );
 
+    //Crea una nueva area
     router.post('/areas',
-     auth,
-     areasController.nuevaArea 
+        auth,
+        areasController.nuevaArea 
     );
 
     //Empleados
 
      // Agrega nuevos empleados via POST
-     router.post('/empleados',
-     auth,
-     empleadosController.nuevoEmpleado 
- );
+    router.post('/empleados',
+        auth,
+        empleadosController.nuevoEmpleado 
+    );
 
  // Obtener todos los empleados
- router.get('/empleados', 
-    auth,
-    empleadosController.mostrarEmpleados
- );
+    router.get('/empleados', 
+        auth,
+        empleadosController.mostrarEmpleados
+    );
 
- // Muestra un empleado en especifico (ID)
- router.get('/empleados/:idEmpleado', 
-    auth,
-    empleadosController.mostrarEmpleado );
+    // Muestra un empleado en especifico (ID)
+    router.get('/empleados/:idEmpleado', 
+        auth,
+        empleadosController.mostrarEmpleado 
+    );
 
- // Actualizar Empleado
- router.put('/empleados/:idEmpleado',
-    //auth, 
-     empleadosController.actualizarEmpleado);
+    // Actualizar Empleado
+    router.put('/empleados/:idEmpleado',
+        empleadosController.actualizarEmpleado
+    );
 
- // Eliminar Empleado
- router.delete('/empleados/:idEmpleado',
-    //auth, 
-     empleadosController.eliminarEmpleado);
+    // Eliminar Empleado
+    router.delete('/empleados/:idEmpleado',
+        empleadosController.eliminarEmpleado
+    );
 
 
     // Usuarios

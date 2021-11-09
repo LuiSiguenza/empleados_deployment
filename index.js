@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv').config({path: 'variables.env'});
 
-// Cors permite que un cliente se conecta a otro servidor para el intercambio de recursos
+
 
 const cors = require('cors');
 

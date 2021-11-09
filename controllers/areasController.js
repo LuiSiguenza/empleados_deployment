@@ -17,12 +17,10 @@ exports.mostrarSubarea = async (req, res, next) => {
         res.json({mensaje : 'Esa area no existe'});
         next()
     }
-
     res.json(area);
 }
 
 exports.nuevaArea = async (req, res, next) => {
-    
     const area = new Areas(req.body);
 
     try { 
