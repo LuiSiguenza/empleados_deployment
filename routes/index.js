@@ -49,7 +49,7 @@ module.exports = function() {
 
  // Actualizar Empleado
  router.put('/empleados/:idEmpleado',
-    auth, 
+    //auth, 
      empleadosController.actualizarEmpleado);
 
  // Eliminar Empleado
