@@ -23,7 +23,7 @@ const whitelist = [process.env.FRONTEND_URL];
 const corsOption = { 
 
     origin: ( origin, callback) => {
-        console.log('inicio origin',origin,whitelist)
+        console.log('inicio origin',whitelist.some( dominio => dominio === origin),whitelist.some( dominio => dominio == origin))
         const existe = whitelist.some( dominio => dominio === origin);
         if(existe){
             callback(null, true);
