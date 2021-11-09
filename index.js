@@ -23,11 +23,12 @@ console.log(whitelist)
 const corsOption = { 
 
     origin: ( origin, callback) => {
-        
+        console.log(origin)
         const existe = whitelist.some( dominio => dominio === origin);
         if(existe){
             callback(null, true);
         }else {
+            console.log(origin)
             callback(new Error(whitelist));
         }
     }
